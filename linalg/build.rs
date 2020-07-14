@@ -153,6 +153,7 @@ fn preprocess_file(input: impl AsRef<path::Path>, output: impl AsRef<path::Path>
     }
     .to_owned();
     let globals = liquid::object!({
+        "msvc": msvc,
         "family": family,
         "os": os,
         "L": l,
